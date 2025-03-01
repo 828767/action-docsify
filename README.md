@@ -1,37 +1,39 @@
-# Docsify-theme-darcula
+# Docsify
 
-> ⭐️如果你感兴趣/正在使用,期待得到你的star!
+> An awesome project.
 
-⚠️注意:本主题为模板库!
+## 概述
+Docsify 可以快速帮你生成文档网站。不同于 GitBook、Hexo 的地方是它不会生成静态的 `.html` 文件，所有转换工作都是在运行时。如果你想要开始使用它，只需要创建一个 `index.html` 就可以开始编写文档并直接部署在 GitHub Pages。
 
-> 灵感来自于各个Darcula主题
+查看 [官方文档][docsify] 了解详情。
 
-* css位于本地,方便修改(`darcula.css`)
-* 开箱即用,本地已集成搜索/emoji/部分代码高亮
+[docsify]: https://docsify.js.org/#/zh-cn/ "Docsify 官方在线文档"
 
-## 使用方法
-在你的项目中引用
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/A5yncX/docsify-theme-darcula@v1.0/darcula.css">
-```
-1. 下载`darcula.css`使用即可
-2. 额外下载`index.html`进行覆盖/配制. 或请直接下载本库并进行编辑.
+## 快速开始
 
----
-> ⭐️ If you are interested/are using, look forward to getting your star!
+### 初始化项目
+!> 本仓库不需要本步骤
 
-⚠️ Note: This theme is a template library!
+如果想在项目的 `./docs` 目录里写文档，直接通过 `init` 初始化项目。
 
-> Inspired by various Darcula themes
-* CSS is local and easy to modify ('darcula.css ')
-* Out of the box, local integrated search/emoji/partial code highlighting
-## Usage
-
-Reference in your project
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/A5yncX/docsify-theme-darcula@v1.0/darcula.css">
+```bash
+docsify init ./docs
 ```
 
-1. Download 'darcula.css 'to use
-2. Additional download 'index.html 'for overlay/configuration. Or please download this library directly and edit it
+### 开始写文档
+
+初始化成功后，可以看到 `./docs` 目录下创建的几个文件
+
+- `index.html` 入口文件
+- `README.md` 会做为主页内容渲染
+- `.nojekyll` 用于阻止 GitHub Pages 忽略掉下划线开头的文件
+
+直接编辑 `docs/README.md` 就能更新文档内容，当然也可以[添加更多页面](https://docsify.js.org/#/zh-cn/more-pages)。
+
+### 本地预览
+
+通过运行 `docsify serve` 启动一个本地服务器，可以方便地实时预览效果。默认访问地址 `http://localhost:3000` 。
+
+```bash
+docsify serve docs
+```
