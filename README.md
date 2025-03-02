@@ -37,3 +37,7 @@ docsify init ./docs
 ```bash
 docsify serve docs
 ```
+
+## 优秀教程
+1. [docsify 安装与配置](https://juejin.cn/post/7236694100216381499 "稀土掘金")
+2. [docsify的配置+全插件列表](https://xhhdd.cc/index.php/archives/80/ "腾讯开发者社区：https://cloud.tencent.com/developer/article/2177009")
