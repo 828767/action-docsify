@@ -8,4 +8,5 @@
   - [Hexo](https://yiwangmeng.cn/action-hexo/)
   - [Hugo](https://yiwangmeng.cn/action-hugo/)
   - [VitePress](https://yiwangmeng.cn/action-vitepress/)
+  - [WordPress](https://www.yiwangmeng.com/)
   - [GitBook](https://yiwangmeng.cn/action-gitbook/)
