@@ -8,6 +8,10 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/docsify/4.13.1/themes/vue.min.css">
+  <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+  <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+  <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+  <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
 </head>
 <body>
   <div id="app"></div>
@@ -20,20 +24,34 @@
       subMaxLevel: 3, //自定义侧边栏后默认不会再生成目录，可以通过设置生成目录的最大层级开启
       loadNavbar: true, //加载自定义导航栏 _navbar.md
       coverpage: true, //开启渲染封面 _coverpage.md
-      search: { //全文搜索 https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search
-          // insertAfter: '.app-name',
-          // insertBefore: '.sidebar-nav',
-          noData: {
-            '/': 'No results!',
-            '/zh-cn/': '没有结果!',
+      i18n: { //多语言
+        currentLang: 'zh',
+        langs: {
+          zh: {
+            // 中文文档的配置
           },
-          paths: 'auto',
-          placeholder: {
-            '/': 'Search',
-            '/zh-cn/': '搜索',
+          en: {
+            // 英文文档的配置
+            name: 'Docsify',
+            loadSidebar: 'en/_sidebar.md',
           },
-          pathNamespaces: ['/', '/zh-cn'],
+          // 更多语言...
         },
+      },
+      search: { //全文搜索 https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search
+        // insertAfter: '.app-name',
+        // insertBefore: '.sidebar-nav',
+        noData: {
+          '/': '没有结果!',
+          '/en/': 'No results!',
+        },
+        paths: 'auto',
+        placeholder: {
+          '/': '搜索',
+          '/en/': 'Search',
+        },
+        pathNamespaces: ['/', '/en'],
+      },
     }
   </script>
 
@@ -41,5 +59,6 @@
   <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.13.1/docsify.min.js"></script>
   <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.13.1/plugins/search.min.js"></script>
   <script src="//cdn.bootcdn.net/ajax/libs/docsify-copy-code/3.0.0/docsify-copy-code.min.js"></script>
+  <script src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
 </body>
 </html>
